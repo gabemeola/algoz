@@ -1,6 +1,6 @@
-const createNodeList = require('../createNodeList');
-const prettyJson = require('../../prettyJson')
 const profile = require('../../profile');
+const createNodeList = profile(require('../createNodeList'));
+const prettyJson = require('../../prettyJson')
 
 
  function findMiddleNode(nodeHead) {
@@ -18,5 +18,6 @@ const profile = require('../../profile');
 const measureFindMiddleNode = profile(findMiddleNode);
 
 
-const nodeList = createNodeList(2000000)
+const nodeList = createNodeList(20000)
 console.log(measureFindMiddleNode(nodeList))
+
