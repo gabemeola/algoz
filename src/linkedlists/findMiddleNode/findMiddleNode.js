@@ -1,7 +1,4 @@
-const profile = require('../../profile');
-const createNodeList = profile(require('../createNodeList'));
 const prettyJson = require('../../prettyJson')
-
 
 // Time Complexity: O(log n) - Logarithmic Time
 function findMiddleNode(nodeHead) {
@@ -16,9 +13,5 @@ function findMiddleNode(nodeHead) {
   return slowPointer;
 }
 
-const measureFindMiddleNode = profile(findMiddleNode);
-
-
-const nodeList = createNodeList(20000)
-console.log(measureFindMiddleNode(nodeList))
+module.exports = findMiddleNode;
 
