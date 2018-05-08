@@ -1,5 +1,3 @@
-const profile = require('../profile');
-
 // Time Complexity: O(n) - linear time
 function areAnagrams(firstWord, secondWord) {
   // New HashMap "Histogram"
@@ -22,7 +20,5 @@ function areAnagrams(firstWord, secondWord) {
   })
 }
 
-const runAndProfile = profile(areAnagrams);
-console.log(runAndProfile('earthh', 'hearth'))
-console.log(runAndProfile('silent', 'listen'))
-console.log(runAndProfile('foo', 'bar'))
+
+module.exports = areAnagrams;

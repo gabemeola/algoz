@@ -3,7 +3,8 @@ const createNodeList = profile(require('../createNodeList'));
 const prettyJson = require('../../prettyJson')
 
 
- function findMiddleNode(nodeHead) {
+// Time Complexity: O(log n) - Logarithmic Time
+function findMiddleNode(nodeHead) {
   let fastPointer = nodeHead;
   let slowPointer = nodeHead;
 

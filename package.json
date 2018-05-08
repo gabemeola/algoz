@@ -6,7 +6,11 @@
   "author": "Gabe M <gabemeola@gmail.com>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "test": "jest"
+  },
   "dependencies": {
-    "faker": "^4.1.0"
+    "faker": "^4.1.0",
+    "jest": "^22.4.3"
   }
 }
