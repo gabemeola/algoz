@@ -10,7 +10,7 @@ const profile = (wrappedFunction) => (...args) => {
   const consoleArg = typeof nextArg !== 'undefined'
       ? `${firstArg} ...`
       : firstArg
-  const consoleResult = result || 'void'
+  const consoleResult = typeof result !== 'undefined' ? result : 'void'
   console.log(`[profile] ${wrappedFunction.name || 'anon'}(${consoleArg}) => ${consoleResult} took ${(t1 - t0).toFixed(4)}ms to execute.`)
   return result;
 }

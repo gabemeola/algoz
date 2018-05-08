@@ -9,6 +9,7 @@ class Queue {
     this.enqueue = profile(this.enqueue.bind(this));
     this.dequeue = profile(this.dequeue.bind(this));
   }
+  // Time Complexity: O(1) - constant time
   enqueue(value) {
     const node = new Node(value);
 
@@ -22,6 +23,7 @@ class Queue {
     this.tail.next = node;
     this.tail = node;
   }
+  // Time Complexity: O(1) - constant time
   dequeue() {
     const node = this.head;
 
