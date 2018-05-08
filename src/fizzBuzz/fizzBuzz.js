@@ -1,5 +1,6 @@
 // Time Complexity: O(n) - linear time
 function fizzBuzz(end = 100) {
+  let arr = []
   for (let i = 1; i <= end; i++) {
     let str = '';
     if (i % 3 === 0) {
@@ -10,8 +11,10 @@ function fizzBuzz(end = 100) {
       str += 'Buzz'
     }
 
-    console.log(str || i)
+    arr.push(str || i)
   }
+
+  return arr
 }
 
-fizzBuzz()
+module.exports = fizzBuzz
