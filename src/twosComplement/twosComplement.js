@@ -11,8 +11,8 @@ function twoComplement(nums, target) {
       // The complement of the current num
       const complement = target - num;
     
-      // If we have seen the complement, we have a match!
-      if (seen.has(complement)) {
+      // If we have seen the complement, AND the complement isn't ourself we have a match!
+      if (seen.has(complement) && complement !== num) {
         return [seen.get(complement), i]
       }
   }
