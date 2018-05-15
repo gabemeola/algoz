@@ -5,16 +5,22 @@ function twoComplement(nums, target) {
   
   for (let i = 0; i < nums.length; i++) {
       const num = nums[i]
-      // Add an Entry to our hashmap
-      seen.set(num, i)
-    
       // The complement of the current num
       const complement = target - num;
     
-      // If we have seen the complement, AND the complement isn't ourself we have a match!
-      if (seen.has(complement) && complement !== num) {
-        return [seen.get(complement), i]
+      // Check if we have seen the complement
+      if (seen.has(complement)) {
+        const complementIndex = seen.get(complement)
+
+        // If the complement index if not ourself, then we have a match!
+        if (complementIndex !== i) {
+          return [complementIndex, i]
+        }
       }
+
+      // Add an Entry to our hashmap
+      // Doing this operation last avoid issues with the same value in multiple indices.
+      seen.set(num, i)
   }
 
   // Clear Map for Garbage Collection
