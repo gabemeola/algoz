@@ -5,9 +5,9 @@ it('should output the correctly', () => {
 })
 
 it('should output the correctly', () => {
-  expect(twoComp([3,2,4], 6)).toEqual([1,2])
+  expect(twoComp([3, 2, 4], 6)).toEqual([1, 2])
 })
 
 it('should output the correctly with duplicated numbers', () => {
-  expect(twoComp([3,3], 6)).toEqual([0,1])
+  expect(twoComp([3, 3], 6)).toEqual([0, 1])
 })
